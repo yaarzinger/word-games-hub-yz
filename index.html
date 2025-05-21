@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#3498db">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מרכז המשחקים של יער</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <h1>🎮 מרכז המשחקים של יער</h1>
+    <button id="themeToggle">🌙</button>
+  </div>
+
+  <p class="subtitle">בחרו משחק כדי להתחיל לשחק</p>
+  <div class="button-grid">
+    <a href="https://www.haaretz.co.il/riddles/5-letters" target="_blank" class="game-button red">וורדעל</a>
+    <a href="games/wordale.html" class="game-button blue">וורדלה</a>
+    <a href="games/milotayim.html" class="game-button green">מילותיים</a>
+    <a href="games/bullword.html" class="game-button purple">בול מילה</a>
+    <a href="https://www.haaretz.co.il/riddles/ty-page/meduyeket/index.html" target="_blank" class="game-button orange">מדוייקת</a>
+    <!-- <a href="my-wordle/my-wordle.html" class="game-button pink">המשחק המגניב של יער</a> -->
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("✅ Service Worker Registered"));
+  }
+</script>
+
+</body>
+</html>

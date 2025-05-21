@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>הוורדעל של יער</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="my-wordle.css">
+  <style>
+      html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--bg-color);
+    }
+
+    .top-bar {
+      background-color: var(--bar-color);
+      color: white;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      flex-shrink: 0;
+    }
+
+    iframe {
+      flex-grow: 1;
+      border: none;
+      width: 100%;
+    }
+
+    .back-button {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #themeToggle {
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 18px;
+      cursor: pointer;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    #themeToggle:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+<div class="top-bar">
+    <button class="back-button" onclick="window.location.href='../index.html'">🔙 חזרה</button>
+    <span class="title">🎲 המשחק המגניב של יער</span>
+    <button id="themeToggle" title="החלף מצב  תאורה">🌙</button>
+  </div>
+  <div id="board"></div>
+
+  <div id="keyboard"></div>
+  <script src="my-wordle.js"></script>
+</body>
+</html>
